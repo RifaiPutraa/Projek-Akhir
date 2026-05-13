@@ -1,0 +1,439 @@
+/* =============================================
+   RIVV STORE - Custom Styles
+   ============================================= */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary: #0d6efd;
+    --dark: #212529;
+    --card-radius: 10px;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* ---- NAVBAR ---- */
+.navbar-brand {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.navbar .nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.navbar .nav-link.active {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* ---- HERO / CAROUSEL ---- */
+#heroCarousel .carousel-item {
+    height: 360px;
+    overflow: hidden;
+    background: #1a1a2e;
+}
+#heroCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+/* Placeholder banner saat gambar belum ada */
+.banner-placeholder {
+    height: 360px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.banner-placeholder .banner-text {
+    text-align: center;
+}
+.banner-placeholder h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%;
+}
+
+/* ---- SECTION TITLE ---- */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+}
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: #dee2e6;
+}
+
+/* ---- GAME CARD ---- */
+.game-card {
+    border: 1px solid #dee2e6;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    background: #fff;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.game-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+    color: inherit;
+    text-decoration: none;
+}
+.game-card .game-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game-card .game-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.game-card .game-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px 6px;
+    color: #212529;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Populer card sedikit lebih besar */
+.game-card-populer .game-img-wrapper {
+    aspect-ratio: 4/3;
+}
+
+/* ---- TOPUP PAGE ---- */
+.topup-header {
+    background: #212529;
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+.topup-header img.game-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #495057;
+}
+
+/* Step indicator */
+.step-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* Nominal cards */
+.nominal-card {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    background: #fff;
+}
+.nominal-card:hover {
+    border-color: var(--primary);
+    background: #f0f5ff;
+}
+.nominal-card.selected {
+    border-color: var(--primary);
+    background: #e8f0fe;
+}
+.nominal-card .diamond-icon {
+    font-size: 1.1rem;
+    color: #0d6efd;
+    margin-bottom: 4px;
+}
+.nominal-card .nominal-name {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #212529;
+}
+.nominal-card .nominal-bonus {
+    font-size: 0.7rem;
+    color: #28a745;
+}
+.nominal-card .nominal-price {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-top: 4px;
+}
+
+/* Metode pembayaran */
+.metode-card {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    background: #fff;
+}
+.metode-card:hover {
+    border-color: var(--primary);
+}
+.metode-card.selected {
+    border-color: var(--primary);
+    background: #e8f0fe;
+}
+.metode-card img {
+    width: 48px;
+    height: 28px;
+    object-fit: contain;
+}
+.metode-card .metode-name {
+    font-size: 0.72rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* ---- TOPUP FORM CARD ---- */
+.topup-box {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: var(--card-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+.topup-box h6 {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ---- SUCCESS PAGE ---- */
+.success-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.success-icon {
+    font-size: 3.5rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+.order-summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.88rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+.order-summary-row:last-child {
+    border-bottom: none;
+}
+
+/* ---- KENAPA PILIH KAMI ---- */
+.feature-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: var(--card-radius);
+    padding: 1.5rem;
+    text-align: center;
+    height: 100%;
+}
+.feature-card .feature-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+.feature-card h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.feature-card p {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* ---- LOGIN PAGE ---- */
+.login-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+/* ---- ADMIN ---- */
+.admin-sidebar {
+    min-height: 100vh;
+    background: #212529;
+    color: #fff;
+    width: 220px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 1rem;
+    z-index: 100;
+}
+.admin-sidebar .brand {
+    padding: 0.75rem 1.25rem 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 1px solid #343a40;
+    margin-bottom: 0.5rem;
+}
+.admin-sidebar .nav-link {
+    color: #adb5bd;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 0;
+    transition: background 0.15s, color 0.15s;
+}
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background: #343a40;
+    color: #fff;
+}
+.admin-sidebar .nav-link i {
+    font-size: 1rem;
+    width: 18px;
+}
+.admin-content {
+    margin-left: 220px;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+.admin-topbar {
+    background: #fff;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.75rem 1.5rem;
+    margin-left: 220px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stat-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: var(--card-radius);
+    padding: 1.25rem;
+}
+.stat-card .stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #212529;
+}
+.stat-card .stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* ---- BADGE STATUS ---- */
+.badge-berhasil { background: #d1e7dd; color: #0a3622; }
+.badge-pending  { background: #fff3cd; color: #664d03; }
+.badge-gagal    { background: #f8d7da; color: #58151c; }
+
+/* ---- PLACEHOLDER SVG WRAPPER ---- */
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+    background: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #adb5bd;
+    font-size: 0.75rem;
+    gap: 4px;
+}
+.placeholder-img i {
+    font-size: 2rem;
+}
+
+/* ---- FOOTER ---- */
+footer .text-muted {
+    color: #adb5bd !important;
+}
+footer h5,
+footer h6 {
+    color: #f8f9fa !important;
+}
+footer a.text-muted {
+    color: #adb5bd !important;
+}
+footer a.text-muted:hover {
+    color: #ffffff !important;
+}
+footer p.text-muted {
+    color: #adb5bd !important;
+}
+footer .text-center.text-muted {
+    color: #adb5bd !important;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    #heroCarousel .carousel-item,
+    .banner-placeholder {
+        height: 220px;
+    }
+    .banner-placeholder h3 { font-size: 1.3rem; }
+    .admin-sidebar { display: none; }
+    .admin-content, .admin-topbar { margin-left: 0; }
+}
